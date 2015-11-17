@@ -36,7 +36,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/../public'));
 
-// fetch all posts
+// fetch all Posts
 app.get('/posts', postController.listPosts);
 // create post
 app.post('/posts', postController.createPost);
@@ -60,6 +60,8 @@ app.delete('want_to_trys', wantToTryController.deleteWantToTry);
 app.get('/want_to_trys/user/:id', wantToTryController.getWantToTryByUser);
 // fetch want to trys by post
 app.get('/want_to_trys/post/:id', wantToTryController.getWantToTryByUser);
+
+
 
 app.listen(process.env.PORT || 3000);
 console.log('Listening...');
