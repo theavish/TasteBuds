@@ -56,7 +56,7 @@ exports.showPost = function(req, res) {
   }).fetch({
     withRelated: ['user']
   }).then(function(resultingPost) {
-    if (resultingPost == undefined) {
+    if (resultingPost === undefined) {
       // no such result
       res.status(404).json({
         error: "Post not found."
