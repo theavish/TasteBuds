@@ -24,6 +24,8 @@
   "dependencies": {
     "font-awesome": "fontawesome#~4.4.0",
     "Materialize": "materialize#~0.97.2",
-    "angular": "~1.4.7"
+    "angular": "~1.4.7",
+    "jQuery": "~2.1.4",
+    "angular-ui-router": "~0.2.15"
   }
 }
