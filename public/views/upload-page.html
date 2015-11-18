@@ -1,19 +1,5 @@
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js"></script>
-<div>
-  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-
- <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/css/materialize.min.css">
-
-  <!-- Needed for icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/js/materialize.min.js"></script>
-    <script src='../js/uploadController.js'></script>
-<div ng-controller="uploadController as ctrl">
+<div class="container" ng-controller="uploadController">
   {{ctrl.bullshit}}
-</div>
 
 <style>
   div.zero-width {
@@ -48,8 +34,6 @@
     margin-top: 8px;
   }
 </style>
-
-{{ctrl.bullshit}}
 
   <form action="#">
     <div class="file-field input-field center-align">
