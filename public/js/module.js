@@ -3,6 +3,7 @@ angular.module('tastebuds', [
 ])
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise('/');
   $stateProvider
     .state('upload', {
       url: '/upload',
@@ -10,7 +11,7 @@ angular.module('tastebuds', [
       controller: 'uploadController'
     })
     .state('home', {
-      url: '/home',
+      url: '/',
       templateUrl: '../views/landing-page.html',
       controller: 'landingController'
     })
@@ -23,7 +24,18 @@ angular.module('tastebuds', [
       url: '/profile',
       templateUrl: '../views/user-profile.html',
       controller: 'profileController'
-    });
+    })
+    .state('profile.postList', {
+      url: '/post-list',
+      templateUrl: '../views/post-list.html',
+      controller: function($scope) {
+        $scope.dogs = ['fuck', 'poop', 'shit']
+      }
+    })
+    .state('profile.eatList', {
+      url: '/want-to-try',
+      templateUrl: '../views/want-to-try.html'
+    })
     // .state('wantToTry', {
     //   url: '/wantToTry',
     //   templateUrl: '../views/want-to-try.html'

@@ -12,7 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/js/materialize.min.js"></script>
 
   <!-- This script is for Angular UI routes (will have to NPM install if we decide on using this) -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/angular.ui-router/0.2.15/angular-ui-router.min.js"></script>
 
 
     <div class="row">
@@ -39,18 +39,13 @@
 
 <!-- Use angular's (routeProvider); -->
     <div class="row" ng-controller="profileController">
-        <div class="container col l6 s6 right-align" ng-click="">
-            <i class="fa fa-th fa-4x"><h5>Posts</h5>
-            <!-- HOW DO YOU PUT AN IMAGE ON THE VIEW?? -->
-              <ul>
-                {{ getPosts() | filter:profile.username }}
-              </ul></i>
+        <div class="container col l6 s6 right-align">
+          <a ui-sref=".postList" class="btn waves-effect waves-light">
+            <i class="fa fa-th fa-4x">Posts</i></a>
         </div>
         <div class="container col l6 s6">
-            <i class="fa fa-cutlery fa-4x center-align"><h5>Eat me!</h5>
-            <li>
-              {{ getEats() | filter:posts.eat }}
-            </li></i>
+          <a ui-sref=".eatList" class="btn waves-effect waves-light">
+            <i class="fa fa-cutlery fa-4x center-align">Eat me!</i></a>
 
         </div>
     </div>
