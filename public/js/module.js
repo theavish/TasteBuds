@@ -8,7 +8,6 @@ angular.module('tastebuds', [
     .state('upload', {
       url: '/upload',
       templateUrl: '../views/upload-page.html',
-      controller: 'uploadController'
     })
     .state('home', {
       url: '/',
@@ -17,7 +16,6 @@ angular.module('tastebuds', [
     .state('feed', {
       url: '/feed',
       templateUrl: '../views/feed.html',
-      controller: 'feedController'
     })
     .state('profile', {
       url: '/profile',
@@ -33,20 +31,15 @@ angular.module('tastebuds', [
     .state('profile.eatList', {
       url: '/want-to-try',
       templateUrl: '../views/want-to-try.html'
+    })
+    .state('wantToTry', {
+      url: '/wantToTry',
+      templateUrl: '../views/want-to-try.html'
     });
-    // .state('wantToTry', {
-    //   url: '/wantToTry',
-    //   templateUrl: '../views/want-to-try.html'
-    //   contr
-    // });
 })
 
 .controller('landingController', function($scope) {
   $scope.message = 'lol the landingController works.';
-  // $scope.profile = {
-  //   username: users.username,
-  //   password: users.password
-  // };
 })
 
 .controller('feedController', function($scope, $http) {
