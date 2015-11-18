@@ -1,76 +1,36 @@
 <div class="container" ng-controller="uploadController">
-  {{ctrl.bullshit}}
+  <div class="file-field input-field center-align">
+    <div class="col s12"><h1>Upload your shitty pics</h1></div>
+    <div class="center btn">
+      <span>Pick a photo to upload</span>
+      <i class="mdi-image-camera-alt"></i>
+      <form id="form1" runat="server">
+        <input type="file" id="imgInp" />
+        <img id="blah" src="#" alt="your image" />
 
-<style>
-  div.zero-width {
-    width: 0;
-    max-width: 0;
-    margin: 0 auto;
-  }
-  div.center {
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    max-width: 25%;
-    border-radius: 10px;
-  }
-  button.comment-submit {
-    border-radius: 10px;
-    /*margin-top: -95px;*/
-    margin-left: 20%;
-  }
-  img#blah {
-    max-height: 400px;
-    max-width: 400px;
-    position: relative;
-    left: -35%;
-  }
-  div.input-field {
-    line-height: 9px;
-  }
-  textarea.input-field {
-    line-height: 20px;
-    margin-top: 8px;
-  }
-</style>
-
-  <form action="#">
-    <div class="file-field input-field center-align">
-      <div class="col s12"><h1>Upload your shitty pics</h1></div>
-        <div class="center btn">
-          <span>Pick a photo to upload</span>
-          <i class="mdi-image-camera-alt"></i>
-          <form id="form1" runat="server">
-            <input type="file" id="imgInp" />
-            <img id="blah" src="#" alt="your image" />
-
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <!-- <i class="large material-icons prefix">comment</i> -->
-                  <input type="text" class="blue-text text-darken-2 validate">
-                  <label for="icon_prefix2">Describe dat food!</label>
-                </div>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <!-- <i class="large material-icons prefix">comment</i> -->
+                <input type="text" class="blue-text text-darken-2 validate">
+                <label for="icon_prefix2">Describe dat food!</label>
               </div>
-            </form>
-          </div>
-
-          <div class="row">
-            <button ng-click="ctrl.postData();" class="comment-submit btn waves-effect waves-light submit" type="submit" name="action">Submit
-            <i class="mdi-content-send right"></i>
-            </button>
-          </div>
+            </div>
           </form>
         </div>
-        <div class="zero-width file-path-wrapper">
-          <input class="file-path validate" type="text">
+
+        <div class="row">
+          <button ng-click="ctrl.postData();" class="comment-submit btn waves-effect waves-light submit" type="submit" name="action">Submit
+            <i class="mdi-content-send right"></i>
+          </button>
         </div>
+      </form>
     </div>
-
-
-  </form>
+    <div class="zero-width file-path-wrapper">
+      <input class="file-path validate" type="text">
+    </div>
+  </div>
 
   <script>
   $('#blah').hide();
